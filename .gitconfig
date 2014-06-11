@@ -1,3 +1,9 @@
+[http]
+        sslVerify = false
+[credential]
+        helper = osxkeychain
+
+
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
@@ -5,6 +11,7 @@
 
 	# View the current working tree status using the short format
 	s = status -s
+	st = status
 
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
@@ -57,6 +64,21 @@
 	# List contributors with number of commits
 	contributors = shortlog --summary --numbered
 
+	# Branch shortcut 
+	br = branch
+
+	# checkout
+	co = checkout
+
+	# log formats
+	lpg = log --pretty=\"%h %an %s\" --graph
+	log-graph = log --all --graph --decorate
+	log-refs = log --all --graph --decorate --oneline --simplify-by-decoration --no-merges
+	log-timeline = "log --format='\"%ad\";\"%h\";\"%an\";\"%s\"' --all"
+
+	# Push and set upstream
+	psu = push --set-upstream origin
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
@@ -65,8 +87,8 @@
 [core]
 
 	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
+	#excludesfile = ~/.gitignore
+	#attributesfile = ~/.gitattributes
 
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error
 	# [default] trailing-space: looks for spaces at the end of a line
@@ -106,6 +128,7 @@
 
 	# Detect copies as well as renames
 	renames = copies
+	tool = diffmerge
 
 [help]
 
@@ -116,6 +139,14 @@
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+	tool = diffmerge 
+
+[difftool "diffmerge"]
+	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+
+[mergetool "diffmerge"]
+	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+	trustExitCode = true
 
 # URL shorthands
 
