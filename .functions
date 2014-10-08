@@ -244,3 +244,10 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+# Ammend the git user to be the isght one
+function git_amend_isight() {
+  git config user.name "Aukjan van Belkum"
+  git config user.email "avbelkum@isightpartners.com"
+  git commit --amend --reset-author
+}
