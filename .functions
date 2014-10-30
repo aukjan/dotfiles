@@ -1,6 +1,6 @@
 # Vagrant Provision with puppet
 function vpup () {
-	vagrant provision --with-provider puppet
+	vagrant provision --provision-with puppet
 }
 
 # Simple calculator
