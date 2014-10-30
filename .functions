@@ -1,3 +1,8 @@
+# Vagrant Provision with puppet
+function vpup () {
+	vagrant provision --with-provider puppet
+}
+
 # Simple calculator
 function calc() {
 	local result="";

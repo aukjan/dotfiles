@@ -78,7 +78,7 @@
 	log-timeline = "log --format='\"%ad\";\"%h\";\"%an\";\"%s\"' --all"
 
 	# Push and set upstream
-	psu = push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
+	psu = "! git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD) "
 
 [apply]
 
