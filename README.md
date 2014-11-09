@@ -1,4 +1,6 @@
-# Mathias’s dotfiles
+# Aukjan's Dotfiles
+
+Based on those from: [Mathias Bynens](http://mathiasbynens.be/)
 
 ![Screenshot of my shell prompt](http://i.imgur.com/EkEtphC.png)
 
