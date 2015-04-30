@@ -3,6 +3,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/lib/tsung/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 
 # Home Relative
 export PATH=${HOME}/dev/bin:$PATH
