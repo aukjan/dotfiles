@@ -47,9 +47,5 @@ brew 'webkit2png'
 #brew xpdf
 brew 'zopfli'
 
-brew 'homebrew/versions/lua52'
-
-# Remove outdated versions from the cellar
-brew 'cleanup'
-
 brew 'the_silver_searcher'
+brew 'gpg2'
