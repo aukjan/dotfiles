@@ -49,3 +49,4 @@ brew 'zopfli'
 
 brew 'the_silver_searcher'
 brew 'gpg2'
+brew 'docker-compose'
