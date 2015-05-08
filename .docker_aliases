@@ -34,4 +34,4 @@ dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/[
 # Setup docker environment
 alias dup='eval "$(boot2docker shellinit)"'
 # Create graph of docker images
-alias dgr='docker images -viz && dot -Tpng -o docker.png && open docker.png '
+alias dgr='docker images -viz | dot -Tpng -o docker.png && open docker.png '
