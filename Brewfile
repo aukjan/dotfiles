@@ -49,5 +49,11 @@ brew 'zopfli'
 
 brew 'the_silver_searcher'
 brew 'gpg2'
-brew 'docker-compose'
 brew 'graphviz'
+brew 'ansible'
+brew 'maven'
+brew 'awscli'
+brew 'docker-compose'
+brew 'docker-machine'
+brew "jq"
+brew "httping"
