@@ -57,3 +57,4 @@ brew 'docker-compose'
 brew 'docker-machine'
 brew "jq"
 brew "httping"
+brew "watch"
