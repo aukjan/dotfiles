@@ -1,3 +1,11 @@
+# docker machine
+alias dm="docker-machine"
+alias dml="dm ls"
+alias dmenv='eval "$(dm env)"'
+
+# docker compose
+alias dco="docker-compose"
+
 # Get latest container ID
 alias dl="docker ps -l -q"
 # Get container process
@@ -32,6 +40,6 @@ dbu() { docker build -t=$1 .; }
 # Show all alias related docker
 dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
 # Setup docker environment
-alias dup='eval "$(boot2docker shellinit)"'
+
 # Create graph of docker images
-alias dgr='docker images -viz | dot -Tpng -o docker.png && open docker.png '
+alias dgr='docker images -viz && dot -Tpng -o docker.png && open docker.png '
