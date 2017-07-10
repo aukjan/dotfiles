@@ -12,3 +12,12 @@ export PATH=${HOME}/bin:$PATH
 # Opt
 export PATH=/opt/local/bin:$PATH
 export PATH=/opt/local/sbin:$PATH
+
+# Projects
+export CD_PATH=${HOME}/Projects:$CD_PATH
+export CD_PATH=${HOME}/Projects/*/{github,git}:$CD_PATH
+
+
+# Pyenv
+export PATH="${HOME}/.pyenv:${HOME}/.pyenv/shims:$PATH"
+eval "$(pyenv init -)"
