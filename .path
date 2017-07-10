@@ -8,6 +8,11 @@ export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 # Home Relative
 export PATH=${HOME}/dev/bin:$PATH
 export PATH=${HOME}/bin:$PATH
+# pyenv
+export PATH="${HOME}/.pyenv:${HOME}/.pyenv/shims:$PATH"
+export PATH="${HOME}/.pyenv:${HOME}/.pyenv/shims:$PATH"
+# pipsi
+export PATH="${HOME}/.local/bin:$PATH"
 
 # Opt
 export PATH=/opt/local/bin:$PATH
@@ -17,7 +22,4 @@ export PATH=/opt/local/sbin:$PATH
 export CD_PATH=${HOME}/Projects:$CD_PATH
 export CD_PATH=${HOME}/Projects/*/{github,git}:$CD_PATH
 
-
-# Pyenv
-export PATH="${HOME}/.pyenv:${HOME}/.pyenv/shims:$PATH"
 eval "$(pyenv init -)"
