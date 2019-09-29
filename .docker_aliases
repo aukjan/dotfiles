@@ -1,7 +1,10 @@
+[[ -s "$(brew --prefix dvm)/dvm.sh" ]] && source "$(brew --prefix dvm)/dvm.sh"
+
 # docker machine
 alias dm="docker-machine"
 alias dml="dm ls"
-alias dmenv='eval "$(dm env)"'
+alias dmenv='eval "$(dm env default)"'
+alias deiq='eval "$(dm env eclecticiq)"'
 
 # docker compose
 alias dco="docker-compose"

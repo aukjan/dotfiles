@@ -98,3 +98,12 @@ if has("autocmd")
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
+
+" Format JSON
+
+au BufRead,BufNewFile *.json set filetype=json
+map <leader>jt <Esc>:%!python -m json.tool<CR>
+
+" Format XML
+au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+set equalprg=xmllint\ --format\ -

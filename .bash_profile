@@ -1,3 +1,6 @@
+# Setup Direnv
+eval "$(direnv hook bash)"
+
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
@@ -49,3 +52,7 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+export FLEETCTL_ENDPOINT=http://172.17.8.101:4001
+export KUBERNETES_MASTER=http://172.17.8.101:8080
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
